@@ -1,10 +1,11 @@
 import React from 'react';
 import image from '../images/image.jpg';
+import s from './Profile.module.css';
 import ava from '../images/ava.jpg';
 
 const Profile = () => {
     return (
-      <div className='content'>
+      <div className={s.content}>
       <div>
         <img src={image} />
       </div>
@@ -16,11 +17,11 @@ const Profile = () => {
         <div>
           new post
         </div>
-        <div>
-          <div>
+        <div className={s.posts}>
+          <div className={s.item}>
             Post 1
           </div>
-          <div>
+          <div className={s.item}>
             Post 2
           </div>
         </div>
