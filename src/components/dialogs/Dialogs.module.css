@@ -5,11 +5,18 @@
 .dialogItems{
     padding: 10px;
 }
-.dialog{
-    color: #395e8a;
+.dialog a{
+    color: #3174c3;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 10px;
+    transition: all .3s;
+}
+.dialog a:hover{
+    color: #64a7f1;
 }
 .dialog.active{
-    color: #6a8cb1;
+    color: #64a7f1;
 }
 .messages{
     padding: 10px;
