@@ -11,5 +11,5 @@
 }
 .app__content{
     grid-area: c; 
-    background-color: #fcc; 
+    background-color: blue; 
 }
