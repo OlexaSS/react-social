@@ -4,17 +4,17 @@ import MyPosts from './myPosts/MyPosts';
 import s from './Profile.module.css';
 
 const Profile = () => {
-    return (
-      <div>
-      <div>
+  return (
+    <div className={s.profile}>
+      <div className={s.img}>
         <img src={image} />
       </div>
       <div>
         ava + descr
       </div>
-        <MyPosts />
+      <MyPosts />
     </div>
-    );
+  );
 }
 
 

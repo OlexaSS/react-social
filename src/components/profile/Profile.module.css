@@ -1,1 +1,9 @@
-
+.img{
+    max-width: 600px;
+}
+.img img{
+    width: 100%;
+}
+.profile{
+    background-color: #fefefe;
+}
