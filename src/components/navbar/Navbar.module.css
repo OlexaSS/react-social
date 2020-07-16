@@ -5,10 +5,17 @@
 }
 
 .item a{
-  color: #fff;
+  color: #6a8cb1;
   text-decoration: none;
+  transition: all .3s;
+  padding-bottom: 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+.item a:hover{
+  color: #fff;
 }
 
 .item a.active{
-  color: darkcyan;
+  color: #fff;
 }

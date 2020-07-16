@@ -4,7 +4,7 @@ import s from'./Header.module.css';
 const Header = () => {
     return (
         <header className={s.header}>
-            <a>My Logo</a>
+            <a href='#' className={s.header_link}>My Cocial</a>
         </header>
     );
 }

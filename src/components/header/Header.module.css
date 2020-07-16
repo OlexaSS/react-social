@@ -1,7 +1,16 @@
 .header{
     grid-area: h;
     background-color: #4c77a4;
+    text-align: center;
 }
-.header img{
-    width: 60px;
+
+.header_link{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 60px;
+    transition: all .3s;
+}
+.header_link:hover{
+    color: #ccc;
 }
