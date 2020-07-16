@@ -15,7 +15,7 @@
 .dialog a:hover{
     color: #64a7f1;
 }
-.dialog.active{
+.dialog a.active{
     color: #64a7f1;
 }
 .messages{

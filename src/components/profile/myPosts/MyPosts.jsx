@@ -4,10 +4,13 @@ import Post from './posts/Post';
 
 const MyPosts = () => {
 
-  let postsData = [
+  let posts = [
     {id: 1, post: 'Hello, how are you?', counter: 12},
     {id: 2, post: 'My first post', counter: 30}
   ];
+
+  let postElement = posts.map( (p) => <Post message={p.post} counter={p.counter} /> );
+
   return (
     <div className={s.postBlock}>
       <form action="">
@@ -22,8 +25,7 @@ const MyPosts = () => {
         </div>
       </form>
       <div className={s.posts}>
-        <Post message={postsData[0].post} counter={postsData[0].counter} />
-        <Post message={postsData[1].post} counter={postsData[1].counter} />
+        {postElement}
       </div>
     </div>
   );
