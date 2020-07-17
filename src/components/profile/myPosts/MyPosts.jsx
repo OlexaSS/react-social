@@ -9,7 +9,7 @@ const MyPosts = () => {
     {id: 2, post: 'My first post', counter: 30}
   ];
 
-  let postElement = posts.map( (p) => <Post message={p.post} counter={p.counter} /> );
+  let postElement = posts.map( (p) => <Post key={p.id} message={p.post} counter={p.counter} /> );
 
   return (
     <div className={s.postBlock}>
