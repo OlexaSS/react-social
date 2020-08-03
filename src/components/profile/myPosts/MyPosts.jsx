@@ -3,21 +3,22 @@ import s from './MyPosts.module.css';
 import Post from './posts/Post';
 
 const MyPosts = (props) => {
-
-
-
   let postElement = props.posts.map( (p) => <Post key={p.id} message={p.post} counter={p.counter} /> );
-
+  let newPostElement = React.createRef();
+  let addPost = () => {
+      let text = newPostElement.current.value;
+    alert(text);
+  }
   return (
     <div className={s.postBlock}>
       <form action="">
         <h3 className={s.postTitle}>my post</h3>
         <div>
           <div className={s.text}>
-            <textarea rows='10' cols='50'></textarea>
+            <textarea ref={newPostElement} rows='10' cols='50'></textarea>
           </div>
           <div className={s.btn}>
-            <button className={s.postBtn}>Add post</button>
+            <button className={s.postBtn} onClick={ addPost } >Add post</button>
           </div>
         </div>
       </form>
@@ -27,6 +28,4 @@ const MyPosts = (props) => {
     </div>
   );
 }
-
-
 export default MyPosts;

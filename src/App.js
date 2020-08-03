@@ -9,9 +9,7 @@ import Settings from './components/settings/Settings';
 import {BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 
-
 const App = (props) => {
-
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
@@ -24,8 +22,6 @@ const App = (props) => {
           <Route path='/dialogs' 
             render={ () => <Dialogs 
               state={props.appState.dialogsPage} />} />
-
-              
           <Route path='/news' component={News} />
           <Route path='/music' component={Music} />
           <Route path='/settings' component={Settings} />
@@ -33,9 +29,7 @@ const App = (props) => {
       </div>
     </BrowserRouter>
   )
-
 }
-
 export default App;
 
 
