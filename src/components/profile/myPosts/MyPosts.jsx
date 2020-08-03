@@ -6,7 +6,8 @@ const MyPosts = () => {
 
   let posts = [
     {id: 1, post: 'Hello, how are you?', counter: 12},
-    {id: 2, post: 'My first post', counter: 30}
+    {id: 2, post: 'My first post', counter: 30},
+    {id: 3, post: 'My second post', counter: 22}
   ];
 
   let postElement = posts.map( (p) => <Post key={p.id} message={p.post} counter={p.counter} /> );
