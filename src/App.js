@@ -10,7 +10,9 @@ import {BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 
 
-const App = () => {
+const App = (props) => {
+
+  
 
   return (
     <BrowserRouter>
@@ -21,8 +23,8 @@ const App = () => {
           {/* <Route path='/profile' component={Profile} />
           <Route path='/dialogs' component={Dialogs} /> */}
 
-          <Route path='/profile' render={ () => <Profile /> } />
-          <Route path='/dialogs' render={ () => <Dialogs />} />
+          <Route path='/profile' render={ () => <Profile posts={props.posts}/> } />
+          <Route path='/dialogs' render={ () => <Dialogs dialogs={props.dialogs} messages={props.messages}/>} />
 
 
 
