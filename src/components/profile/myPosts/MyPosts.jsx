@@ -5,10 +5,13 @@ import Post from './posts/Post';
 const MyPosts = (props) => {
   let postElement = props.posts.map( (p) => <Post key={p.id} message={p.post} counter={p.counter} /> );
   let newPostElement = React.createRef();
+
   let addPost = () => {
+    debugger;
       let text = newPostElement.current.value;
-    alert(text);
+    props.addPost(text);
   }
+
   return (
     <div className={s.postBlock}>
       <form action="">
