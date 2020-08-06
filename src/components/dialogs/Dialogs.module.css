@@ -24,3 +24,34 @@
 .messageItem{
     color: #3174c3;
 }
+
+.text textarea{
+    resize: none;
+    border: 1px solid #7c8ca1;
+    color: #7c8ca1;
+    font-size: 16px;
+}
+.text textarea:focus{
+    outline: none;
+}
+.btn{
+    text-align: center;
+    
+}
+.postBtn{
+    color: #fff;
+    border: 1px solid #889bb6;
+    width: 100px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #49759e;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.postBtn:hover{
+    background-color: #4886c7;
+}
+.postBtn:focus{
+    outline: none;
+}
