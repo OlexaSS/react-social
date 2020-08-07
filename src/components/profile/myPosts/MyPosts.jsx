@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './posts/Post';
-import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../redux/state';
+import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../redux/profile-reduser';
 
 
 
@@ -20,6 +20,7 @@ const MyPosts = (props) => {
     props.dispatch( updateNewPostTextActionCreator(text) );
   }
 
+  
   return (
     <div className={s.postBlock}>
       <form action="">
