@@ -44,7 +44,7 @@ let store = {
     getState(){
         return this._state;
     },
-    subscribe (observer) {
+    subscribe (observer) { //подписаться на изменения, чтобы в индекс перерисовывать все дерево
         this._callSubscriber = observer;
     },
     dispatch(action){
@@ -53,7 +53,7 @@ let store = {
         this._state.dialogsPage = dialogsReduser(this._state.dialogsPage, action);
         this._state.sidebar = sidebarReduser(this._state.sidebar, action);
 
-        this._callSubscriber(this._state);
+        this._callSubscriber(this._state);// уведомляем всех подписчиков 
 
 
 

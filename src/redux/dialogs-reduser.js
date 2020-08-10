@@ -1,7 +1,27 @@
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY';
 const SEND_MESSAGE = 'SEND_MESSAGE';
 
-const dialogsReduser = (state, action) => {
+let initialState = {
+    messages: [
+        {id: 1, message: 'Hi there!'},
+        {id: 2, message: 'Good day!'},
+        {id: 3, message: 'Good bue!'},
+        {id: 4, message: 'Hi there!'},
+        {id: 5, message: 'Good day!'},
+        {id: 6, message: 'Good bue!'}    
+    ],
+    dialogs: [
+        {id: 1, name: 'Kolya'},
+        {id: 2, name: 'Andrey'},
+        {id: 3, name: 'Petya'},
+        {id: 4, name: 'Vasya'},
+        {id: 5, name: 'Sasha'},
+        {id: 6, name: 'Olexa'}
+    ],
+    newMessageBody: ''
+};
+
+const dialogsReduser = (state = initialState, action) => {
 
                             // if(action.type === UPDATE_NEW_MESSAGE_BODY){
                             //     state.newMessageBody = action.body;

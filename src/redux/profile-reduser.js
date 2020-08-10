@@ -1,7 +1,16 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-const profileReduser = (state, action) => {  //в стейте приходит profilePage
+let initialState = {
+    posts: [
+        {id: 1, post: 'Hello, how are you?', counter: 12},
+        {id: 2, post: 'My first post', counter: 30},
+        {id: 3, post: 'My second post', counter: 22}
+    ],
+    newPostText: 'write here'
+};
+
+const profileReduser = (state = initialState, action) => {  //в стейте приходит profilePage
     
     // if(action.type === ADD_POST){
     //     let newPost = {
