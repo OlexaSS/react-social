@@ -9,7 +9,8 @@ import Settings from './components/settings/Settings';
 import {BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 
-const App = (props) => {
+
+const App = () => {
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
@@ -17,11 +18,9 @@ const App = (props) => {
         <Navbar />
         <div className='app__content'>
           <Route path='/profile' 
-            render={ () => <Profile store={props.store}
-              /> } />
+            render={ () => <Profile /> } />
           <Route path='/dialogs' 
-            render={ () => <DialogsContainer 
-              store={props.store} />} />
+            render={ () => <DialogsContainer  />} />
           <Route path='/news' component={News} />
           <Route path='/music' component={Music} />
           <Route path='/settings' component={Settings} />
