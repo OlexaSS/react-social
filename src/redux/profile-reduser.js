@@ -33,32 +33,22 @@ const profileReduser = (state = initialState, action) => {  //в стейте п
 ////////////////////////////////////////////////////////////////////////////
 
     switch (action.type){
-        case ADD_POST:{
+        case ADD_POST:
             let newPost = {
                 id: 5,
                 post: state.newPostText,
                 counter: 0
             };
-            let stateCopy = {...state};// копируем объект
-                stateCopy.posts = [...state.posts];/// копи массив постов
-                stateCopy.posts.push(newPost);//пушим в копию новый пост
-                stateCopy.newPostText = '';//очищаем поле ввода
-                return stateCopy;
-        }
-
-            // state.posts.push(newPost);
-            // state.newPostText = '';
-            // return state;
+            return {...state, // копируем объект
+                posts: [...state.posts, newPost],/// копи массив постов//пушим в копию новый пост
+                newPostText: ''//очищаем поле ввода
+            };
 
         case UPDATE_NEW_POST_TEXT:{
-            let stateCopy = {...state};
-            stateCopy.newPostText = action.newText;
-            return stateCopy;
-
-
-
-            // state.newPostText = action.newText;
-            // return state;
+            return {...state,
+                newPostText: action.newText,
+            };
+            
         }
         default: return state;
 
