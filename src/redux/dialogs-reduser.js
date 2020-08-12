@@ -35,15 +35,33 @@ const dialogsReduser = (state = initialState, action) => {
 
                             // return state;
 
+    //let stateCopy;
+
     switch(action.type){
-        case UPDATE_NEW_MESSAGE_BODY: 
-            state.newMessageBody = action.body;
-            return state;
+        case UPDATE_NEW_MESSAGE_BODY:
+                return {
+                ...state, //берем весь старый объект
+                newMessageBody: action.body//добавляем изменения в стейт
+            };
+            
+
+            // state.newMessageBody = action.body;
+            // return state;
+            
         case SEND_MESSAGE: 
-            let body =  state.newMessageBody; //получаем текс
-            state.newMessageBody = ''; //обнуляем поле ввода
-            state.messages.push({id: 6, message: body}); //пушим в стейт
-            return state;
+        let body =  state.newMessageBody; //получаем тексt
+        return {
+            ...state,
+            newMessageBody: '', //обнуляем поле ввода
+            messages: [...state.messages, {id: 6, message: body}] //пушим в стейт
+            };
+
+
+            // let body =  state.newMessageBody; //получаем текс
+            // state.newMessageBody = ''; //обнуляем поле ввода
+            // state.messages.push({id: 6, message: body}); //пушим в стейт
+            // return state;
+        
         default: return state;
     }
 }

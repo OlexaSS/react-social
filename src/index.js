@@ -22,11 +22,8 @@ let rerenderEntireTree = () => {
   );
 }
 
-rerenderEntireTree(store.getState());
+rerenderEntireTree();
 
-store.subscribe(() => {
-  rerenderEntireTree();
-});
 
 
 
