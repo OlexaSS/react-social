@@ -4,7 +4,6 @@ import MyPosts from './MyPosts';
 import {connect} from 'react-redux';
 
 
-
 // const MyPostsContainer = () => {
 
 //   //let state = props.store.getState();
