@@ -6,17 +6,22 @@ import userPhoto from '../../accets/images/user.jpg';
 
 let Users = (props) => {
 
+    let getUsers = () =>{
+
     if(props.users.length === 0){
         axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
         
         props.setUsers(response.data.items);
 
         });
+    }
 
 }
 
-    return <div>{
-        props.users.map(u => <div key={u.id}>
+    return <div>
+        <button onClick={getUsers}>Get users</button>
+            {props.users.map(u => <div key={u.id}>
+            
             <span>
                 <div>
                     <img src={u.photos.small !=null ? u.photos.small : userPhoto } className={style.userPhoto} />
