@@ -1,6 +1,6 @@
 import React from 'react';
 import Users from './Users';
-import { followAC, unfollowAC, setUsersAC } from '../../redux/users-reduser';
+import { followAC, unfollowAC, setUsersAC, setCurrentPageAC, setUsersTotalCountAC } from '../../redux/users-reduser';
 import { connect } from 'react-redux';
 
 
@@ -8,14 +8,18 @@ import { connect } from 'react-redux';
 
 let mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users
+        users: state.usersPage.users,  //прокидываем в юзерс из юзеер редусер
+        pageSize: state.usersPage.pageSize,
+        totalUsersCount: state.usersPage.totalUsersCount,
+        currentPage: state.usersPage.currentPage
+
     }
 } 
 
 let mapDispatchToProps = (dispatch) => {
     return {
         follow: (userId) => {
-            dispatch(followAC(userId)); //диспатчим результат креатора!!
+            dispatch(followAC(userId)); //диспатчим РЕЗУЛЬТАТ креатора!!
         },
 
         unfollow: (userId) => {
@@ -23,8 +27,14 @@ let mapDispatchToProps = (dispatch) => {
         },
 
         setUsers: (users) => {
-            dispatch(setUsersAC(users)); //
-        }
+            dispatch(setUsersAC(users));
+        },
+        setCurrentPage: (setNumber) => {
+            dispatch(setCurrentPageAC(setNumber));
+        },
+        setUsersTotalCount: (totalCount) => {
+            dispatch(setUsersTotalCountAC(totalCount));
+        } 
     }
 }
 

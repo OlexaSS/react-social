@@ -4,3 +4,10 @@
     border-radius: 50%;
     object-fit: cover;
 }
+.selectedPage{
+    font-weight: bold;
+}
+span{
+    padding-left: 20px;
+    cursor: pointer;
+}
