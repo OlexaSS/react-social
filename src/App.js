@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/header/Header';
 import Navbar from './components/navbar/Navbar';
-import Profile from './components/profile/Profile';
+import ProfileContainer from './components/profile/ProfileContainer';
 import DialogsContainer from './components/dialogs/DialogsContainer';
 import News from './components/news/News';
 import Music from './components/music/Music';
@@ -20,7 +20,7 @@ const App = () => {
         <Navbar />
         <div className='app__content'>
           <Route path='/profile'
-            render={() => <Profile />} />
+            render={() => <ProfileContainer />} />
 
           <Route path='/dialogs'
             render={() => <DialogsContainer />} />

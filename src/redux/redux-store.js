@@ -11,6 +11,8 @@ let redusers = combineReducers({
     usersPage: usersReduser
 });
 
-let store = createStore(redusers);
+let store = createStore(redusers); //создали стор с помощью редакса
+
+window.store = store;
 
 export default store;

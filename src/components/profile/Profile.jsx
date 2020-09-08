@@ -3,11 +3,11 @@ import MyPostsContainer from './myPosts/MyPostsContainer';
 import s from './Profile.module.css';
 import ProfileInfo from './profileinfo/ProfileInfo';
 
-const Profile = () => {
+const Profile = (props) => { //сюда приходит профайл из контейнера
   return (
     <div>
     
-      <ProfileInfo />
+      <ProfileInfo profile = {props.profile} /> {/*прокидываем пропсы дальше в профайлинфо */}
       <MyPostsContainer />
     </div>
   );

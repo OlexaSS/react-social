@@ -5,7 +5,6 @@ import * as axios from 'axios';
 import Users from './Users';
 import Preloader from '../common/preloader/Preloader';
 
-
 class UsersContainer extends React.Component {
     componentDidMount() {
         this.props.toggleIsFetching(true);
@@ -54,35 +53,6 @@ let mapStateToProps = (state) => {
     }
 }
 
-
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (userId) => {
-//             dispatch(followAC(userId)); //диспатчим РЕЗУЛЬТАТ креатора!!
-//         },
-
-//         unfollow: (userId) => {
-//             dispatch(unfollowAC(userId));
-//         },
-
-//         setUsers: (users) => {
-//             dispatch(setUsersAC(users));
-//         },
-//         setCurrentPage: (setNumber) => {
-//             dispatch(setCurrentPageAC(setNumber));
-//         },
-//         setUsersTotalCount: (totalCount) => {
-//             dispatch(setUsersTotalCountAC(totalCount));
-//         },
-//         toggleIsFetching: (isFetching) => {
-//             dispatch(toggleIsFetchingAC(isFetching));
-//         }
-//     }
-// }
-
-
-
-
 export default connect(mapStateToProps, {   
     follow,
     unfollow,
@@ -91,5 +61,3 @@ export default connect(mapStateToProps, {
     setTotalUsersCount,
     toggleIsFetching
 })(UsersContainer);
-
-
